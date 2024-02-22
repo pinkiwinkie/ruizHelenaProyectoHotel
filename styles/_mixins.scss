@@ -63,3 +63,21 @@
     cursor: pointer;
   }
 }
+
+@mixin imgRooms($url) {
+  background-image: url($url);
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  @media screen and (max-width: 765px) {
+    width: 100%;
+  }
+}
+
+@mixin footerImgHotel($url){
+  background-image: url($url);
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}

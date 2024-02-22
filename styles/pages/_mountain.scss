@@ -1,0 +1,43 @@
+@import '../variables';
+.background-mountain {
+  @include mainImage("../../img/hotel1-1.png");
+
+  &::before {
+    @include mainImageBefore("MAGIC LA MASSANA");
+  }
+}
+
+.container-rooms {
+  margin: 1%;
+  .card {
+    border-radius: 5px;
+    height: auto;
+    background-color: rgb(161, 206, 229);
+    &:hover {
+      @include hoverCards(0, 10px, 15px, rgba(0, 0, 0, 0.3), 5px);
+    }
+    .bg-image1 {
+      @include imgRooms("../img/hotel1-3.png");
+    }
+    .bg-image2 {
+      @include imgRooms("../img/hotel1-2.png");
+    }
+    .bg-image3 {
+      @include imgRooms("../img/hotel1-4.png");
+    }
+    .bg-image4 {
+      @include imgRooms("../img/hotel1-5.png");
+    }
+    .btn-color{
+      @include buttons();
+    }
+  }
+}
+
+.img-mountain{
+  background-image: url("../img/monta1.png");
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}

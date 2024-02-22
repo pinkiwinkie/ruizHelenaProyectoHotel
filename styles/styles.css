@@ -227,6 +227,236 @@
   color: #e7d745;
 }
 
+.background-mountain {
+  background-image: url("../../img/hotel1-1.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 35vh;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .background-mountain {
+    margin: 2%;
+  }
+}
+.background-mountain::before {
+  content: "MAGIC LA MASSANA";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3vw;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1vw;
+  width: 100%;
+  max-width: 500px;
+  z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  .background-mountain::before {
+    font-size: 3vw;
+    padding: 3vw;
+  }
+}
+
+.container-rooms {
+  margin: 1%;
+}
+.container-rooms .card {
+  border-radius: 5px;
+  height: auto;
+  background-color: rgb(161, 206, 229);
+}
+.container-rooms .card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+.container-rooms .card .bg-image1 {
+  background-image: url("../img/hotel1-3.png");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+@media screen and (max-width: 765px) {
+  .container-rooms .card .bg-image1 {
+    width: 100%;
+  }
+}
+.container-rooms .card .bg-image2 {
+  background-image: url("../img/hotel1-2.png");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+@media screen and (max-width: 765px) {
+  .container-rooms .card .bg-image2 {
+    width: 100%;
+  }
+}
+.container-rooms .card .bg-image3 {
+  background-image: url("../img/hotel1-4.png");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+@media screen and (max-width: 765px) {
+  .container-rooms .card .bg-image3 {
+    width: 100%;
+  }
+}
+.container-rooms .card .bg-image4 {
+  background-image: url("../img/hotel1-5.png");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+@media screen and (max-width: 765px) {
+  .container-rooms .card .bg-image4 {
+    width: 100%;
+  }
+}
+.container-rooms .card .btn-color {
+  background: #f0ca94 !important;
+  border: none;
+  color: rgb(255, 255, 255) !important;
+}
+.container-rooms .card .btn-color:active {
+  background: #f0ca94 !important;
+  border: none;
+  color: rgb(255, 255, 255) !important;
+}
+.container-rooms .card .btn-color:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.img-mountain {
+  background-image: url("../img/monta1.png");
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.background-beach {
+  background-image: url("../../img/hotel2-1.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 35vh;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .background-beach {
+    margin: 2%;
+  }
+}
+.background-beach::before {
+  content: "SECRETS RESORT & SPA";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3vw;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1vw;
+  width: 100%;
+  max-width: 500px;
+  z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  .background-beach::before {
+    font-size: 3vw;
+    padding: 3vw;
+  }
+}
+
+.container-rooms-beach {
+  margin: 1%;
+}
+.container-rooms-beach .card {
+  border-radius: 5px;
+  height: auto;
+  background-color: rgb(255, 235, 224);
+}
+.container-rooms-beach .card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+.container-rooms-beach .card .bg-image1 {
+  background-image: url("../img/hotel2-2.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+@media screen and (max-width: 765px) {
+  .container-rooms-beach .card .bg-image1 {
+    width: 100%;
+  }
+}
+.container-rooms-beach .card .bg-image2 {
+  background-image: url("../img/hotel2-3.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+@media screen and (max-width: 765px) {
+  .container-rooms-beach .card .bg-image2 {
+    width: 100%;
+  }
+}
+.container-rooms-beach .card .bg-image3 {
+  background-image: url("../img/hotel2-4.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+@media screen and (max-width: 765px) {
+  .container-rooms-beach .card .bg-image3 {
+    width: 100%;
+  }
+}
+.container-rooms-beach .card .bg-image4 {
+  background-image: url("../img/hotel2-5.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+@media screen and (max-width: 765px) {
+  .container-rooms-beach .card .bg-image4 {
+    width: 100%;
+  }
+}
+.container-rooms-beach .card .btn-color {
+  background: #f0ca94 !important;
+  border: none;
+  color: rgb(255, 255, 255) !important;
+}
+.container-rooms-beach .card .btn-color:active {
+  background: #f0ca94 !important;
+  border: none;
+  color: rgb(255, 255, 255) !important;
+}
+.container-rooms-beach .card .btn-color:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.img-beach {
+  background-image: url("../img/beach1.webp");
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -1,0 +1,40 @@
+@import "../variables";
+@import "../mixins";
+//#fac895
+.background-beach{
+  @include mainImage("../../img/hotel2-1.png");
+  &::before {
+    @include mainImageBefore("SECRETS RESORT & SPA");
+  }
+}
+
+.container-rooms-beach{
+  margin: 1%;
+  .card{
+    border-radius: 5px;
+    height: auto;
+    background-color: rgb(255, 235, 224);
+    &:hover {
+      @include hoverCards(0, 10px, 15px, rgba(0, 0, 0, 0.3), 5px);
+    }
+    .bg-image1 {
+      @include imgRooms("../img/hotel2-2.jpg");
+    }
+    .bg-image2 {
+      @include imgRooms("../img/hotel2-3.jpg");
+    }
+    .bg-image3 {
+      @include imgRooms("../img/hotel2-4.jpeg");
+    }
+    .bg-image4 {
+      @include imgRooms("../img/hotel2-5.jpg");
+    }
+    .btn-color{
+      @include buttons();
+    }
+  }
+}
+
+.img-beach{
+  @include footerImgHotel("../img/beach1.webp");
+}
