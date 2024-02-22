@@ -1,0 +1,65 @@
+@mixin headerCards($color1, $color2) {
+  margin-top: -25px;
+  margin-bottom: 3%;
+  height: 120px;
+  box-shadow: 1px 5px 15px #a2a2a2;
+  background: linear-gradient(-90deg, $color1, $color2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin mainImage($urlImg) {
+  background-image: url($urlImg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 35vh;
+  overflow: hidden;
+  @media screen and (max-width: 768px) {
+    margin: 2%;
+  }
+}
+
+@mixin mainImageBefore($content) {
+  content: $content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3vw;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1vw;
+  width: 100%;
+  max-width: 500px;
+  z-index: 1;
+  @media screen and (max-width: 768px) {
+    font-size: 3vw;
+    padding: 3vw;
+  }
+}
+
+@mixin hoverCards($x, $y, $blurRadius, $color, $radius) {
+  box-shadow: $x $y $blurRadius $color;
+  border-radius: $radius;
+}
+
+@mixin buttonStyle() {
+  background: $secondaryColor !important;
+  border: none;
+  color: rgb(255, 255, 255) !important;
+}
+
+@mixin buttons {
+  @include buttonStyle();
+  &:active {
+    @include buttonStyle();
+  }
+  &:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}

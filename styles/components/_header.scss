@@ -1,0 +1,28 @@
+@import "../variables";
+.navbar {
+  &-brand {
+    margin-right: 0;
+    padding: 0 1em;
+    img {
+      width: 80px;
+      @media screen and (min-width: 992px) {
+        width: 100px;
+      }
+    }
+    @media screen and (min-width: 992px) {
+      margin-right: 0;
+      padding: 0 1em;
+    }
+  }
+  &-nav {
+    align-items: center;
+    .nav-link {
+      color: #000;
+      font-size: 1.1em;
+      padding: 0 1em;
+      &.active{
+        color: $colorActive !important;
+      }
+    }
+  }
+}

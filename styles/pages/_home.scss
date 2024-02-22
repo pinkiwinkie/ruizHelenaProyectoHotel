@@ -1,0 +1,126 @@
+@import "../mixins";
+
+.main-index .container-img {
+  width: 97%;
+  margin: auto;
+}
+
+.background-main {
+  @include mainImage("../img/mainPage2.avif");
+
+  &::before {
+    @include mainImageBefore("Hoteles de lujo: Mejores ofertas - Viajes de alta gama");
+  }
+}
+
+.textitos {
+  text-transform: uppercase;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+
+.carousel-inner .card {
+  border: none;
+  border-radius: 0;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  @media screen and (min-width: 577px) {
+    margin: 0 0.5em;
+    width: calc(100% / 3);
+  }
+  &:hover {
+    @include hoverCards(1px, 1px, 15px, #000, 5px);
+  }
+  .btn-color {
+    @include buttons();
+  }
+}
+
+.carousel-inner {
+  padding: 1em;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #1e1e1e !important;
+  width: 3% !important;
+  height: 5% !important;
+  border-radius: 50% !important;
+  top: 50%;
+  transform: translateY(200px);
+  margin: 1% !important;
+  @media screen and (max-width: 577px) {
+    width: 5% !important;
+    height: 5% !important;
+  }
+}
+
+.carousel-control-prev span,
+.carousel-control-next span {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.image-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 5px;
+}
+
+.cards-wrapper {
+  .image-wrapper {
+    @media screen and (min-width: 577px) {
+      height: 22vw;
+      margin: 0 auto;
+    }
+  }
+  @media screen and (min-width: 577px) {
+    display: flex;
+  }
+
+  .btn-color {
+    @include buttons();
+  }
+}
+
+.main {
+  margin-top: 50px;
+  .card {
+    &-section {
+      @include hoverCards(0, 2px, 5px, rgba(0, 0, 0, 0.16), 0);
+      &:hover {
+        @include hoverCards(1px, 1px, 15px, #000, 5px);
+      }
+    }
+    &-header-first {
+      @include headerCards(#ba81e0, #ee996f);
+    }
+    &-header-second {
+      @include headerCards(#6dece2, #294dad);
+    }
+    &-header-third {
+      @include headerCards(#11998e, #d588e9);
+    }
+    &-body {
+      span {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+    }
+    &-footer {
+      color: #e7d745;
+    }
+    &-raters {
+      display: flex;
+      flex-direction: column;
+      margin-left: 25%;
+      &__specified {
+        display: flex;
+        flex-direction: row;
+        &-rated {
+          margin-right: 5%;
+          color: #e7d745;
+        }
+      }
+    }
+  }
+}
