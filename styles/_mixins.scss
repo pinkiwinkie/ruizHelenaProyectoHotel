@@ -81,3 +81,21 @@
   background-size: cover;
   background-position: center;
 }
+
+@mixin animationForm($translate, $opacity, $blur, $delay) {
+  transform: translateX($translate);
+  opacity: $opacity;
+  filter: blur($blur);
+  transition-delay: calc(0.1s * var($delay));
+}
+
+@mixin animationBgForm($top, $height,$rotate, $skew, $origin, $delay) {
+  position: absolute;
+  top: $top;
+  width: 850px;
+  height: $height;
+  transform: rotate($rotate) skewY($skew);
+  transform-origin: bottom $origin;
+  transition: 1.5s ease;
+  transition-delay: $delay;
+}

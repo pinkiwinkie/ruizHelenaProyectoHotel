@@ -1,0 +1,244 @@
+@import "../mixins";
+@import "../variables";
+
+.container-forms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  // background: #7d7c7c;
+  .wrapper {
+    position: relative;
+    width: 750px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid $secondaryColor;
+    box-shadow: 0 0 25px $secondaryColor;
+    overflow: hidden;
+    &.active {
+      .form-box.login .animation {
+        @include animationForm(-120%, 0, 3, --i);
+      }
+      .form-box.register {
+        pointer-events: auto;
+        .animation {
+          @include animationForm(0, 1, 0, --i);
+        }
+      }
+      .info-text.login .animation {
+        @include animationForm(120%, 0, 3, --i);
+      }
+      .info-text.register {
+        pointer-events: auto;
+        .animation {
+          @include animationForm(0, 1, 0, --i);
+        }
+      }
+      .bg-animate {
+        transform: rotate(0deg) skewY(0);
+        transition-delay: 0.5s;
+      }
+      .bg-animate2 {
+        transform: rotate(-11deg) skewY(-41deg);
+        transition-delay: 1.2s;
+      }
+    }
+    .bg-animate {
+      @include animationBgForm(-4px, 600px, 10deg, 40deg, right, 1.6s);
+      right: 0;
+      background: linear-gradient(45deg, #48a3e4, $secondaryColor);
+      border-bottom: 3px solid $secondaryColor;
+    }
+    .bg-animate2 {
+      position: absolute;
+      top: 100%;
+      left: 250px;
+      width: 850px;
+      height: 700px;
+      background: $colorActive;
+      border-top: 3px solid $secondaryColor;
+      transform: rotate(0deg) skewY(0);
+      transform-origin: bottom left;
+      transition: 1.5s ease;
+      transition-delay: 0.5s;
+    }
+    .form-box {
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &.login {
+        left: 0;
+        padding: 0 60px 0px 40px;
+        .animation {
+          transform: translateX(0);
+          transition: 0.7s ease;
+          opacity: 1;
+          filter: blur(0);
+          transition-delay: calc(0.1s * var(--j));
+        }
+      }
+      &.register {
+        right: 0;
+        padding: 0 40px 0px 60px;
+        .animation {
+          transform: translateX(120%);
+          transition: 0.7s ease;
+          opacity: 0;
+          filter: blur(3px);
+          transition-delay: calc(0.1s * var(--j));
+        }
+      }
+      h2 {
+        font-size: 32px;
+        //color: $colorActive;
+        text-align: center;
+      }
+      .input-box {
+        position: relative;
+        width: 100%;
+        height: 50px;
+        margin: 25px 0;
+        input {
+          width: 100%;
+          height: 100%;
+          background: transparent;
+          border: none;
+          outline: none;
+          border-bottom: 2px solid #000;
+          padding-right: 23px;
+          font-size: 16px;
+          font-weight: 500;
+          transition: 0.5s;
+          &:focus ~ label {
+            top: -5px;
+            color: $secondaryColor;
+          }
+          &:valid ~ label {
+            top: -5px;
+            color: $secondaryColor;
+          }
+          &:focus {
+            border-bottom-color: $secondaryColor;
+          }
+          &:valid {
+            border-bottom-color: $secondaryColor;
+          }
+          &:focus ~ i {
+            color: $secondaryColor;
+          }
+          &:valid ~ i {
+            color: $secondaryColor;
+          }
+        }
+        label {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          font-size: 16px;
+          //color: $colorActive;
+          pointer-events: none;
+          transition: 0.5s;
+        }
+        i {
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          font-size: 18px;
+          //color: $colorActive;
+          transition: 0.5s;
+        }
+      }
+      .btn {
+        position: relative;
+        width: 100%;
+        height: 45px;
+        background: transparent;
+        border: 2px solid $secondaryColor;
+        outline: none;
+        border-radius: 40px;
+        cursor: pointer;
+        font-size: 16px;
+        //color: $colorActive;
+        font-weight: 600;
+        z-index: 1;
+        overflow: hidden;
+        &::before {
+          content: "";
+          position: absolute;
+          top: -100%;
+          left: 0;
+          width: 100%;
+          height: 300%;
+          background: linear-gradient(#ba81e0, #ee996f, #ba81e0, #ee996f);
+          z-index: -1;
+          transition: 0.5s;
+        }
+        &:hover::before {
+          top: 0;
+        }
+      }
+      .logreg-link {
+        font-size: 14.5px;
+        //color: $colorActive;
+        text-align: center;
+        margin: 20px 0 10px;
+        p a {
+          color: $secondaryColor;
+          text-decoration: none;
+          font-weight: 600;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .info-text {
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &.login {
+        right: 0;
+        text-align: right;
+        padding: 0 40px 60px 130px;
+        .animation {
+          transform: translateX(0);
+          opacity: 1;
+          filter: blur(0px);
+          transition: 0.7s ease;
+          transition-delay: calc(0.1s * var(--j));
+        }
+      }
+      &.register {
+        left: 0;
+        text-align: left;
+        padding: 0 150px 60px 40px;
+        pointer-events: none;
+        .animation {
+          transform: translateX(-150%);
+          transition: 0.7s ease;
+          opacity: 0;
+          filter: blur(3px);
+          transition-delay: calc(0.1s * var(--j));
+        }
+      }
+      h2 {
+        font-size: 36px;
+        line-height: 1.3;
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
