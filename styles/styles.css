@@ -457,6 +457,21 @@
   background-position: center;
 }
 
+.btn-color {
+  background: #f0ca94 !important;
+  border: none;
+  color: rgb(255, 255, 255) !important;
+}
+.btn-color:active {
+  background: #f0ca94 !important;
+  border: none;
+  color: rgb(255, 255, 255) !important;
+}
+.btn-color:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 * {
   margin: 0;
   padding: 0;
