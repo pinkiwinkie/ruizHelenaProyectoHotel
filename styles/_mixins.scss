@@ -74,7 +74,7 @@
   }
 }
 
-@mixin footerImgHotel($url){
+@mixin footerImgHotel($url) {
   background-image: url($url);
   width: 100%;
   height: 200px;
@@ -89,7 +89,7 @@
   transition-delay: calc(0.1s * var($delay));
 }
 
-@mixin animationBgForm($top, $height,$rotate, $skew, $origin, $delay) {
+@mixin animationBgForm($top, $height, $rotate, $skew, $origin, $delay) {
   position: absolute;
   top: $top;
   width: 850px;
@@ -97,6 +97,19 @@
   transform: rotate($rotate) skewY($skew);
   transform-origin: bottom $origin;
   transition: 1.5s ease;
+  transition-delay: $delay;
+}
+
+@mixin labelI() {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  transition: 0.5s;
+}
+
+@mixin bgAnimation($rotate, $skew, $delay){
+  transform: rotate($rotate) skewY($skew);
   transition-delay: $delay;
 }
 

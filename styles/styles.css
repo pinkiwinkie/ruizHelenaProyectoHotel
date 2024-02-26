@@ -700,6 +700,8 @@
 .container-forms .wrapper.active .bg-animate2 {
   transform: rotate(-11deg) skewY(-41deg);
   transition-delay: 1.2s;
+  transform: rotate(-11deg) skewY(-41deg);
+  transition-delay: 1.2s;
 }
 .container-forms .wrapper .bg-animate {
   position: absolute;
@@ -717,15 +719,15 @@
 .container-forms .wrapper .bg-animate2 {
   position: absolute;
   top: 100%;
-  left: 250px;
   width: 850px;
   height: 700px;
-  background: #fff;
-  border-top: 3px solid #f0ca94;
   transform: rotate(0deg) skewY(0);
   transform-origin: bottom left;
   transition: 1.5s ease;
   transition-delay: 0.5s;
+  left: 250px;
+  background: #fff;
+  border-top: 3px solid #f0ca94;
 }
 .container-forms .wrapper .form-box {
   position: absolute;
@@ -742,10 +744,10 @@
 }
 .container-forms .wrapper .form-box.login .animation {
   transform: translateX(0);
-  transition: 0.7s ease;
   opacity: 1;
   filter: blur(0);
   transition-delay: calc(0.1s * var(--j));
+  transition: 0.7s ease;
 }
 .container-forms .wrapper .form-box.register {
   right: 0;
@@ -753,10 +755,10 @@
 }
 .container-forms .wrapper .form-box.register .animation {
   transform: translateX(120%);
-  transition: 0.7s ease;
   opacity: 0;
   filter: blur(3px);
   transition-delay: calc(0.1s * var(--j));
+  transition: 0.7s ease;
 }
 .container-forms .wrapper .form-box h2 {
   font-size: 32px;
@@ -803,19 +805,21 @@
 .container-forms .wrapper .form-box .input-box label {
   position: absolute;
   top: 50%;
-  left: 0;
   transform: translateY(-50%);
   font-size: 16px;
-  pointer-events: none;
   transition: 0.5s;
+  left: 0;
+  font-size: 16px;
+  pointer-events: none;
 }
 .container-forms .wrapper .form-box .input-box i {
   position: absolute;
   top: 50%;
-  right: 0;
   transform: translateY(-50%);
-  font-size: 18px;
+  font-size: 16px;
   transition: 0.5s;
+  right: 0;
+  font-size: 18px;
 }
 .container-forms .wrapper .form-box .btn {
   position: relative;
@@ -875,9 +879,9 @@
 .container-forms .wrapper .info-text.login .animation {
   transform: translateX(0);
   opacity: 1;
-  filter: blur(0px);
-  transition: 0.7s ease;
+  filter: blur(0);
   transition-delay: calc(0.1s * var(--j));
+  transition: 0.7s ease;
 }
 .container-forms .wrapper .info-text.register {
   left: 0;
@@ -887,10 +891,10 @@
 }
 .container-forms .wrapper .info-text.register .animation {
   transform: translateX(-150%);
-  transition: 0.7s ease;
   opacity: 0;
   filter: blur(3px);
   transition-delay: calc(0.1s * var(--j));
+  transition: 0.7s ease;
 }
 .container-forms .wrapper .info-text h2 {
   font-size: 36px;

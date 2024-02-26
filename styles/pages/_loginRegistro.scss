@@ -35,10 +35,10 @@
         }
       }
       .bg-animate {
-        transform: rotate(0deg) skewY(0);
-        transition-delay: 0.5s;
+        @include bgAnimation(0deg,0,0.5s);
       }
       .bg-animate2 {
+        @include bgAnimation(-11deg,-41deg,1.2s);
         transform: rotate(-11deg) skewY(-41deg);
         transition-delay: 1.2s;
       }
@@ -50,17 +50,10 @@
       border-bottom: 3px solid $secondaryColor;
     }
     .bg-animate2 {
-      position: absolute;
-      top: 100%;
+      @include animationBgForm(100%, 700px, 0deg,0,left, 0.5s);
       left: 250px;
-      width: 850px;
-      height: 700px;
       background: $colorActive;
       border-top: 3px solid $secondaryColor;
-      transform: rotate(0deg) skewY(0);
-      transform-origin: bottom left;
-      transition: 1.5s ease;
-      transition-delay: 0.5s;
     }
     .form-box {
       position: absolute;
@@ -74,27 +67,20 @@
         left: 0;
         padding: 0 60px 0px 40px;
         .animation {
-          transform: translateX(0);
+          @include animationForm(0,1,0, --j);
           transition: 0.7s ease;
-          opacity: 1;
-          filter: blur(0);
-          transition-delay: calc(0.1s * var(--j));
         }
       }
       &.register {
         right: 0;
         padding: 0 40px 0px 60px;
         .animation {
-          transform: translateX(120%);
+          @include animationForm(120%,0,3px,--j);
           transition: 0.7s ease;
-          opacity: 0;
-          filter: blur(3px);
-          transition-delay: calc(0.1s * var(--j));
         }
       }
       h2 {
         font-size: 32px;
-        //color: $colorActive;
         text-align: center;
       }
       .input-box {
@@ -135,23 +121,15 @@
           }
         }
         label {
-          position: absolute;
-          top: 50%;
+          @include labelI();
           left: 0;
-          transform: translateY(-50%);
           font-size: 16px;
-          //color: $colorActive;
           pointer-events: none;
-          transition: 0.5s;
         }
         i {
-          position: absolute;
-          top: 50%;
+          @include labelI();
           right: 0;
-          transform: translateY(-50%);
           font-size: 18px;
-          //color: $colorActive;
-          transition: 0.5s;
         }
       }
       .btn {
@@ -164,7 +142,6 @@
         border-radius: 40px;
         cursor: pointer;
         font-size: 16px;
-        //color: $colorActive;
         font-weight: 600;
         z-index: 1;
         overflow: hidden;
@@ -211,11 +188,8 @@
         text-align: right;
         padding: 0 40px 60px 130px;
         .animation {
-          transform: translateX(0);
-          opacity: 1;
-          filter: blur(0px);
+          @include animationForm(0,1,0,--j);
           transition: 0.7s ease;
-          transition-delay: calc(0.1s * var(--j));
         }
       }
       &.register {
@@ -224,11 +198,8 @@
         padding: 0 150px 60px 40px;
         pointer-events: none;
         .animation {
-          transform: translateX(-150%);
+          @include animationForm(-150%,0,3px,--j);
           transition: 0.7s ease;
-          opacity: 0;
-          filter: blur(3px);
-          transition-delay: calc(0.1s * var(--j));
         }
       }
       h2 {
