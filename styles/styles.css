@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .navbar-brand {
   margin-right: 0;
   padding: 0 1em;
@@ -610,8 +609,8 @@
 }
 @media screen and (max-width: 768px) {
   .main-bookings #form #submit-btn {
-    position: relative; /* Cambia a posicionamiento relativo en dispositivos móviles */
-    bottom: 0; /* Elimina el posicionamiento absoluto */
+    position: relative;
+    bottom: 0;
     left: 15%;
   }
 }

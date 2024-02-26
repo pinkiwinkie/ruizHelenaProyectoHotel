@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="../styles/styles.css" />
-  <title>Hoteles de montaña</title>
+  <title>Mis reservas</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -30,7 +30,7 @@
               <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Hoteles
               </a>
@@ -39,7 +39,7 @@
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item active" href="./mountain.html">Montaña</a></li>
+                <li><a class="dropdown-item" href="./mountain.html">Montaña</a></li>
               </ul>
             </li>
             <a class="navbar-brand d-none d-lg-block" href="../index.html">
@@ -49,13 +49,13 @@
               <a class="nav-link" href="./doBook.html">Reservar</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Perfil
               </a>
               <ul class="dropdown-menu bg-info">
                 <li><a class="dropdown-item" href="./perfil.html">Mi perfil</a></li>
-                <li><a class="dropdown-item" href="./reservas.html">Mis reservas</a></li>
+                <li><a class="dropdown-item active" href="./reservas.html">Mis reservas</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
@@ -74,87 +74,66 @@
       </select>
     </div>
   </header>
-  <main class="main-index">
-    <div class="textitos">
-      <p>Hoteles de montaña</p>
-    </div>
-    <div class="container-img mt-3">
-      <div class="background-mountain d-flex justify-content-center align-items-center"></div>
-    </div>
-    <div class="footerImg p-4">
-      <p>El hotel ideal durante todo el año:</p>
-      <p>si eres aficionado al ciclismo y a la montaña, trae tu mountain bike y usa el taller para BBT;</p>
-      <p>coge tu mochila, y pasea por los senderos del Pirineo Aragonés, no te arrepentirás.</p>
-    </div>
-    <div class="textitos">
-      <p>Nuestras habitaciones</p>
-    </div>
 
-    <div class="container-rooms">
-      <div class="box-container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="card mb-3">
-              <div class="row g-0">
-                <div class="col-4 bg-image1">
+  <main>
+    <div class="container main">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4">
+              <div class="card-section border rounded p-3">
+                <div class="card-header-first rounded pb-5">
+                  <h2 class="card-header-title text-white pt-3">Hotel Magic</h2>
                 </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Habitación simple</h5>
-                    <p class="card-text">10 m2</p>
-                    <p>Desde 56€/noche</p>
-                    <a href="./doBook.html" class="btn btn-color">Ver más</a>
-                  </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Hotel de montaña</h5>
+                  <p class="card-text">Habitación premium (40m2)</p>
+                  <p class="card-text">15/03/2024-19/03/2024</p>
+                  <p class="card-text">Media pensión</p>
+                  <p class="card-text">2 personas</p>
+                  <p class="card-text">No se permite cancelación</p>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card mb-3">
-              <div class="row g-0">
-                <div class="col-4 bg-image2">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Habitación doble</h5>
-                    <p class="card-text">20 m2</p>
-                    <p>Desde 112€/noche</p>
-                    <a href="./doBook.html" class="btn btn-color">Ver más</a>
-                  </div>
+                <hr>
+                <div class="card-footer" style="color: black;">
+                  1308€
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="card mb-3">
-              <div class="row g-0">
-                <div class="col-4 bg-image3">
+            <div class="col-lg-4 col-md-12 mb-4">
+              <div class="card-section border rounded p-3">
+                <div class="card-header card-header-second rounded pb-5">
+                  <h2 class="card-header-title text-white pt-3">Hotel Viva Wyndham</h2>
                 </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Habitación premium</h5>
-                    <p class="card-text">40 m2</p>
-                    <p>Desde 156€/noche</p>
-                    <a href="./doBook.html" class="btn btn-color">Ver más</a>
-                  </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Hotel de playa</h5>
+                  <p class="card-text">Habitación tropical paradise (70m2)</p>
+                  <p class="card-text">26/09/2023-30/09/2023</p>
+                  <p class="card-text">Pensión completa</p>
+                  <p class="card-text">2 personas</p>
+                  <p class="card-text">Sí se permite cancelación</p>
+                </div>
+                <hr>
+                <div class="card-footer" style="color: black;">
+                  1600€
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card mb-3">
-              <div class="row g-0">
-                <div class="col-4 bg-image4">
+            <div class="col-lg-4 col-md-12 mb-4">
+              <div class="card-section card-section-third border rounded p-3">
+                <div class="card-header card-header-third rounded pb-5">
+                  <h2 class="card-header-title text-white pt-3">Sofiel Thalasa</h2>
                 </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Habitación delux</h5>
-                    <p class="card-text">70 m2</p>
-                    <p>Desde 200€/noche</p>
-                    <a href="./doBook.html" class="btn btn-color">Ver más</a>
-                  </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Hotel de playa</h5>
+                  <p class="card-text">Habitación tropical (20m2)</p>
+                  <p class="card-text">6/07/2022-16/07/2022</p>
+                  <p class="card-text">Sólo incluye desayuno</p>
+                  <p class="card-text">2 personas</p>
+                  <p class="card-text">No se permite cancelación</p>
+                </div>
+                <hr>
+                <div class="card-footer" style="color: black;">
+                  2240€
                 </div>
               </div>
             </div>
@@ -162,8 +141,8 @@
         </div>
       </div>
     </div>
+    </div>
   </main>
-  <div class="img-mountain d-none d-md-block"></div>
   <footer class="bg-info text-dark pt-5 pb-4">
     <div class="container text-center text-md-left">
       <div class="row text-center text-md-left">
